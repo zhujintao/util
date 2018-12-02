@@ -1,10 +1,7 @@
-pipeline {
-  agent none
-  stages {
-    stage('') {
-      steps {
-        echo 'Hello World!'
-      }
-    }
-  }
+node{
+
+def common = load “common.groovy”
+
+common.mycommoncode()
+
 }
