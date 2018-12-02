@@ -1,1 +1,8 @@
-echo "Hello World"
+def mycommoncode(){
+  
+  echo "Hello World"
+
+}
+
+return this
+
