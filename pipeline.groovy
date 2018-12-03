@@ -22,14 +22,13 @@ def doAutotest() {
     remote.host = '192.168.1.5'
     remote.allowAnyHosts = true
     withCredentials([usernamePassword(credentialsId: 'taomac', passwordVariable: 'password', usernameVariable: 'userName')]) {
-      echo password
-      echo userName
       remote.user = userName
       remote.password = password
       try {
       sshCommand remote: remote, command: "ls -lrt"
       sshCommand remote: remote, command: "exit -1"
       } catch (exc) {
+      currentBuild.result = 'FAILURE'
       echo currentBuild.result
      }
 
