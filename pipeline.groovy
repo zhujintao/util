@@ -15,6 +15,16 @@ def doBuild(){
 
 }
 
+def goAutoTest() {
+    stage("AutoTest")
+    
+
+}
+
+
+
+
+
 def doDeploy(String toenv){
 
     stage("Deploy to " + toenv)
