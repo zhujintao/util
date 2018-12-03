@@ -1,7 +1,8 @@
+String deploy
 def call(String deploy) {
-    
+    deploy = deploy
     this.doBuild()
-    
+
 
 }
 
@@ -15,12 +16,11 @@ def doBuild(){
 }
 
 def doDeploy(String toenv){
-  
+
     stage("Deploy to " + toenv)
     echo "${env.REGISTRY_ARCH}/" + deploy + ":${env.KUBE_ARCH_NS}_b${env.Build_id}"
-    
+
 }
 
 
 return this;
-
