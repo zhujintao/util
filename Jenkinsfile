@@ -1,3 +1,4 @@
+def pipeline
 pipeline {
     agent any
     stages {
@@ -16,7 +17,7 @@ pipeline {
             steps {
                     fileExists 'pipeline.groovy'
                     //readFile 'jenkinsfile.groovy'
-                    def pipeline = load 'pipeline.groovy'
+                    pipeline = load 'pipeline.groovy'
                     pipeline.autoTest()
             
                    }
