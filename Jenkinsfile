@@ -4,7 +4,7 @@ node {
     sh 'curl -o pipeline.groovy http://192.168.0.142:8089/files/Jenkinsfile.v1'
     
     def pipeline = load 'pipeline.groovy'
-    pipeline.autoTest()
+    pipeline()
 
 }
 
