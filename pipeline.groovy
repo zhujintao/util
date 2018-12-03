@@ -1,6 +1,6 @@
 String deploy
-def call(String deploy) {
-    deploy = deploy
+def call(String deployname) {
+    deploy = deployname
     this.doBuild()
 
 
